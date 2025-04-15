@@ -1,5 +1,5 @@
 const fs = require('fs');
-const SteamSmartIdler = require('./SteamIdler/classes/SteamIdler');
+const SteamSmartIdler = require('./SteamSmartIdler/classes/SteamSmartIdler');
 
 // Config
 const accounts = JSON.parse(fs.readFileSync('./config.json', 'utf8')).accounts;
