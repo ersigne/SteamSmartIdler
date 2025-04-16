@@ -1,0 +1,5 @@
+# Local Modules
+node_modules/
+
+# Credentials
+config.json
