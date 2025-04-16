@@ -31,8 +31,6 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 
     ```bash
     npm install
-    # or
-    yarn install
     ```
 5.  Create a `config.json` file in the main directory following the example below:
 
