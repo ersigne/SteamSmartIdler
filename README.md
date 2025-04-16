@@ -1,6 +1,8 @@
 # SteamSmartIdler
 A Steam Smart Idler that simulates playtime and favourite games, redeems free promotions &amp; points shop items automatically and more.
 
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL_v3-blueviolet.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -82,3 +84,7 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
     run();
     
 ```
+
+## License
+
+This project is licensed under the terms of the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
