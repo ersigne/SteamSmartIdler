@@ -61,7 +61,7 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
     ```
     * **username** - The account username you use during steam login
     * **password** - The account password you use during steam login
-    * **shared_secret** - The account shared secret. Check [here](docs/shared-secret.md) how to get it
+    * **shared_secret** - The account shared secret. Check [here](docs/Shared%20Secret.md) how to get it
     * **limited** - Set to false if you want to idle the 'limited_games' AppID's 24/7, else set to true if you want to idle the 'games' AppID's based on simulated sessions
     * **status** - Steam Profile Status (0 - Offline, 1 - Online, 2 - Busy, 3 - Away, 4 - Snooze, 5 - LookingToTrade, 6 - LookingToPlay, 7 - Invisible)
     * **limited_games** - List of AppID's to play when 'limited' is false
