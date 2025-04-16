@@ -2,6 +2,11 @@
 A Steam Smart Idler that simulates playtime and favourite games, redeems free promotions &amp; points shop items automatically and more.
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL_v3-blueviolet.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Last Commit](https://img.shields.io/github/last-commit/ersigne/SteamSmartIdler)](https://github.com/ersigne/SteamSmartIdler/commits/main)
+[![Open Issues](https://img.shields.io/github/issues-raw/ersigne/SteamSmartIdler)](https://github.com/ersigne/SteamSmartIdler/issues)
+[![Static Badge](https://img.shields.io/badge/Paypal-00457C?style=flat&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/ersignee)
+
+
 
 ## 📜・Table of Contents
 * [Installation](#%EF%B8%8Finstallation)
