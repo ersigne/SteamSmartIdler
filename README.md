@@ -13,20 +13,24 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 
 ## ⚙️・Installation
 1.  Clone the repository:
+
     ```bash
     git clone https://github.com/ersigne/SteamSmartIdler.git
     ```
-2.  Navigate to the project directory:
+3.  Navigate to the project directory:
+
     ```bash
     cd SteamSmartIdler
     ```
-3.  Install dependencies:
+4.  Install dependencies:
+
     ```bash
     npm install
     # or
     yarn install
     ```
-4.  Create a `config.json` file in the main directory following the example below:
+5.  Create a `config.json` file in the main directory following the example below:
+
     ```json
     {
     "accounts": [
@@ -63,6 +67,7 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 
 ## 🚀・Usage
 1. Create a new `index.js` or use the one provided below:
+
 ```js
     // Example index.js
     const fs = require('fs');
