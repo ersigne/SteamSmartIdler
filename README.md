@@ -4,11 +4,11 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL_v3-blueviolet.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 ## 📜・Table of Contents
-* [Installation](#installation)
+* [Installation](#%EF%B8%8Finstallation)
 * [Usage](#usage)
 * [Features](#features)
 * [Contributing](#contributing)
-* [License](#license)
+* [License](#%EF%B8%8Flicense)
 * [Documentation](#documentation)
 
 ## ⚙️・Installation
@@ -92,7 +92,6 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 ```
 
 ## 🔥・Features
-
 * **Simulates Playtime:** Allows you to simulate playtime for your favorite Steam games, potentially increasing your playtime hours as desired.
 * **Multi-Account Support:** Capable of managing and idling multiple Steam accounts simultaneously.
 * **Customizable Playtime Sessions:** Offers configurable playtime sessions with adjustable minimum and maximum hours and minutes per session for each account.
@@ -100,7 +99,6 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 * **Redeems Free Promotions:** Automatically redeems free promotions SubID's you set for each account, saving you the effort of manually claiming them.
 
 ## 🤝・Contributing
-
 We welcome contributions to the SteamSmartIdler project! If you'd like to help out, please follow these guidelines:
 
 1.  **Fork the Repository:** Click the "Fork" button at the top right of the repository page on GitHub (or your chosen platform). This will create a copy of the project under your own account.
@@ -148,7 +146,6 @@ We welcome contributions to the SteamSmartIdler project! If you'd like to help o
 8. **Merge:** Once your pull request is approved, it will be merged into the main codebase. Congratulations on your contribution!
 
 ## ⚖️・License
-
 This project is licensed under the terms of the ***GNU Affero General Public License v3.0*** - see the [LICENSE](LICENSE) file for details.
 
 ## 📚・Documentation
