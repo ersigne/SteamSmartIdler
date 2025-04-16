@@ -1,0 +1,2 @@
+# Shared Secret
+The Steam Shared Secret is a crucial security feature used in conjunction with Steam Mobile Authenticator to provide two-factor authentication (2FA) for your Steam account. It's a unique, alphanumeric code that is generated and stored securely on your mobile device when you enable the Steam Mobile Authenticator.
