@@ -157,4 +157,4 @@ We welcome contributions to the SteamSmartIdler project! If you'd like to help o
 This project is licensed under the terms of the ***GNU Affero General Public License v3.0*** - see the [LICENSE](LICENSE) file for details.
 
 ## 📚・Documentation
-* [How to obtain a Shared Secret](docs/shared-secret.md)
+* [How to obtain a Shared Secret](docs/Shared%20Secret.md)
