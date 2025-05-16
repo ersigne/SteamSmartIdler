@@ -90,6 +90,7 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 * **Customizable Playtime Sessions:** Offers configurable playtime sessions with adjustable minimum and maximum hours and minutes per session for each account.
 * **Selective Game Idling:** Allows you to specify different lists of games to idle when randomly selected.
 * **Redeems Free Promotions:** Automatically redeems free promotions SubID's you set for each account, saving you the effort of manually claiming them.
+* **Redeems Free Points Shop Event Items:** Automatically redeems event items from the Steam Free Points Shop, ensuring you never miss out on available rewards.
 
 ## 🤝・Contributing
 We welcome contributions to the SteamSmartIdler project! If you'd like to help out, please follow these guidelines:
