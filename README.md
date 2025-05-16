@@ -74,28 +74,13 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
 ```js
     // Example index.js
     const fs = require('fs');
-    const SteamSmartIdler = require('./SteamSmartIdler/classes/SteamSmartIdler');
-    
+    const SteamSmartIdler = require('./SteamSmartIdler/SteamSmartIdler');
+
     // Config
     const accounts = JSON.parse(fs.readFileSync('./config.json', 'utf8')).accounts;
-    let delayBetweenLoginsinSeconds = -1; // {-1} - Sets a Random Sleep Timer between 1-5 seconds
-    
-    async function run() {
-        console.clear();
-        for (const [index, account] of Object.entries(accounts)) {
-            // Create a new SteamSmartidler passing to it an account and a list of Free Promotion Packages SubIDs - See https://steamdb.info/upcoming/free/
-            const idler = new SteamSmartIdler(account, [1261257]);
-            idler.start();
-            
-            // Sleep after each login for a random time between 1-5 seconds if delayBetweenLoginsinSeconds is set to -1 or sleep delayBetweenLoginsinSeconds seconds.
-            if (index < Object.keys(accounts).length - 1) {
-                delayBetweenLoginsinSeconds = delayBetweenLoginsinSeconds === -1 ? (Math.floor(Math.random() * 5) + 1) : delayBetweenLoginsinSeconds;
-                await new Promise(resolve => setTimeout(resolve, delayBetweenLoginsinSeconds * 1000));
-            }
-        }
-    }
-    
-    run();
+
+    const SSI = new SteamSmartIdler(accounts, [], [], true); // SteamSmartidler(accounts, [Licenses SubIDs to redeem], [Points Shop Items DefIDs to redeem], autoRedeemFreePromotions)
+    SSI.run();
     
 ```
 
