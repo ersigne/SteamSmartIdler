@@ -1,5 +1,7 @@
 /** @typedef {import('../types/types').TimeTable} TimeTable */
 
+const useragents = require('./useragents');
+
 class Utils {
     /**
      * Generates a random TimeTable with a session that lasts between HoursMin and HoursMax hours and between MinutesMin and MinutesMax minutes.
@@ -52,6 +54,54 @@ class Utils {
      */
     static getRandomGamesToPlay(appIDs) {
         return [appIDs[0], appIDs[Math.floor(Math.random() * (appIDs.length - 1)) + 1]]
+    }
+
+    /**
+     * Returns a random platform with os, browser, useragent taken from useragents.js
+     */
+    static generatePlatform() {
+        const oss = Object.keys(useragents);
+        const os = oss[Math.floor(Math.random() * oss.length)];
+        const browsers = Object.keys(useragents[os]);
+        const browser = browsers[Math.floor(Math.random() * browsers.length)];
+        const usragents = useragents[os][browser];
+        const useragent = usragents[Math.floor(Math.random() * usragents.length)];
+
+        const userAgentParts = useragent.match(/(Chrome|Firefox|Edge|Safari|Internet Explorer)\/?(\s?(\d+)\.(\d+)(\.(\d+))?)?/);
+        let browserVersionForCHUA;
+        if (userAgentParts && userAgentParts[3]) {
+            browserVersionForCHUA = userAgentParts[3];
+        }
+        let secChUABrand = "";
+        switch (browser) {
+            case "Chrome":
+                secChUABrand = `"Google Chrome";v="${browserVersionForCHUA || '135'}", "Not-A.Brand";v="8", "Chromium";v="${browserVersionForCHUA || '135'}"`;
+                break;
+            case "Firefox":
+                secChUABrand = `"Firefox";v="${browserVersionForCHUA || '88'}"`;
+                break;
+            case "Edge":
+                secChUABrand = `"Microsoft Edge";v="${browserVersionForCHUA || '86'}"`;
+                break;
+            case "Safari":
+                secChUABrand = `"Safari";v="${browserVersionForCHUA || '14'}"`; // Approximate Safari version
+                break;
+            case "Internet Explorer":
+                secChUABrand = `"IE";v="${browserVersionForCHUA || '11'}"`; // Approximate IE version
+                break;
+            default:
+                secChUABrand = `"Unknown";v="1"`;
+        }
+
+        const isMobile = os === "Android" || os === "iOS" ? "?1" : "?0";
+        
+        return {
+            os: os,
+            browser: browser,
+            useragent: useragent,
+            secChUABrand: secChUABrand,
+            secChUAMobile: isMobile
+        };
     }
 }
 
