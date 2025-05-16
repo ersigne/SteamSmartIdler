@@ -1,6 +1,6 @@
 /** @typedef {import('../types/types').TimeTable} TimeTable */
 
-const useragents = require('./useragents');
+const useragents = require('../constants/useragents');
 
 class Utils {
     /**

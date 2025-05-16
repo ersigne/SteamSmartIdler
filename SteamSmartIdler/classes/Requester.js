@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const Utils = require('./Utils');
-const { QueryRewardItems } = require('../types/enum');
+const { QueryRewardItems } = require('../constants/enum');
 
 let instance = null;
 
