@@ -79,9 +79,8 @@ A Steam Smart Idler that simulates playtime and favourite games, redeems free pr
     // Config
     const accounts = JSON.parse(fs.readFileSync('./config.json', 'utf8')).accounts;
 
-    const SSI = new SteamSmartIdler(accounts, [], [], true); // SteamSmartidler(accounts, [Licenses SubIDs to redeem], [Points Shop Items DefIDs to redeem], autoRedeemFreePromotions)
+    const SSI = new SteamSmartIdler(accounts, true); // or const SSI = new SteamSmartIdler(accounts, true, [freeLicensesSUBIDs], [freePointsShopItemsDEFIDs]);
     SSI.run();
-    
 ```
 
 ## 🔥・Features
