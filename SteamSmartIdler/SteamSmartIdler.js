@@ -2,7 +2,7 @@ const Idler = require('./classes/Idler');
 const Requester = require('./classes/Requester');
 
 class SteamSmartIdler {
-    constructor(accounts, freeLicenses = [], freePointsShopItems = [], autoRedeemFreePromotions = false) {
+    constructor(accounts, autoRedeemFreePromotions = false, freeLicenses = [], freePointsShopItems = []) {
         this.accounts = accounts;
         this.freeLicenses = freeLicenses;
         this.freePointsShopItems = freePointsShopItems;
