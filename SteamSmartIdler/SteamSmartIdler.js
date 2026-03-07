@@ -19,7 +19,7 @@ class SteamSmartIdler {
             await this.#fetchAndSetFreePromotions();
             await this.#fetchAndSetFreePointsShopItems();
         }
-        
+
         for (const [index, account] of Object.entries(this.accounts)) {
             const idler = new Idler(account, [...this.freeLicenses], [...this.freePointsShopItems]);
             this.idlers.push(idler);

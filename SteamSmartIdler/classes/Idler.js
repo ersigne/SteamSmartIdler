@@ -47,9 +47,9 @@ class Idler {
         this.client.on('licenses', (licenses) => {
             // Removes already owned packages from the list of free licenses to redeem
             this.ownedLicenses = licenses.map((license) => license.package_id);
-            licenses.forEach((license) => {
-                if (this.freeLicenses.includes(license.package_id)) this.freeLicenses.splice(this.freeLicenses.indexOf(license.package_id), 1);
-            });
+            this.ownedLicenses.forEach((license) => {
+                if (this.freeLicenses.includes(license)) this.freeLicenses.splice(this.freeLicenses.indexOf(license), 1);
+            })
         });
     }
 
@@ -89,23 +89,23 @@ class Idler {
     }
 
     async #login() {
-        if (this.shared_secret) this.client.logOn({ accountName: this.username, password: this.password, twoFactorCode: SteamTotp.generateAuthCode(this.shared_secret)});
+        if (this.shared_secret) this.client.logOn({ accountName: this.username, password: this.password, twoFactorCode: SteamTotp.generateAuthCode(this.shared_secret) });
         else this.client.logOn({ accountName: this.username, password: this.password });
-        
-        try { 
+
+        try {
             await this.#waitForLoggedOn();
         }
-        catch (error) { 
-            console.error(`${this.username} - Login error: ${error?.message}`); 
-            process.exit(-1); 
+        catch (error) {
+            console.error(`${this.username} - Login error: ${error?.message}`);
+            process.exit(-1);
         }
 
         try {
             await this.#waitForWebSession();
         }
-        catch (error) { 
-            console.error(`${this.username} - WebSession error: ${error?.message}`); 
-            process.exit(-1); 
+        catch (error) {
+            console.error(`${this.username} - WebSession error: ${error?.message}`);
+            process.exit(-1);
         }
 
         await this.fetchAndSetAccessToken(this.cookies);
@@ -148,7 +148,7 @@ class Idler {
                 //console.log(`${this.username} - Gaming Session started. Playing <${this.toIdle}>`);
                 this.isPlaying = true;
                 await this.client.gamesPlayed(this.toIdle);
-                
+
             } else if (!isWithinPlayTime && this.isPlaying) {
                 // Stop playing if outside the playtime
                 await this.client.gamesPlayed([]);

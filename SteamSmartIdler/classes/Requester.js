@@ -49,7 +49,7 @@ class Requester {
             return freeGamesSubIDs;
         }
         catch (error) {
-            console.error('Error while fetching Free To Keep for a limited time games TEST:', error);
+            console.error('Error while fetching Free To Keep for a limited time games:', error);
             return null;
         }
     }
